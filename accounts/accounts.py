@@ -5,8 +5,11 @@ from logging.handlers import RotatingFileHandler
 from order.order import Order
 
 # loading configuration file
+
 config = configparser.ConfigParser()
-config.read('config.ini')
+# config.read('config.ini')
+# config.read('C:/Users/jjel0/OneDrive/Data_Analytics/repositories/config_sandbox.ini')
+config.read('C:/Users/jjel0/OneDrive/Data_Analytics/repositories/config_live.ini')
 
 # logger settings
 logger = logging.getLogger('my_logger')
@@ -16,7 +19,6 @@ FORMAT = "%(asctime)-15s %(message)s"
 fmt = logging.Formatter(FORMAT, datefmt='%m/%d/%Y %I:%M:%S %p')
 handler.setFormatter(fmt)
 logger.addHandler(handler)
-
 
 class Accounts:
     def __init__(self, session, base_url):

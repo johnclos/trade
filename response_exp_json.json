@@ -1,0 +1,114 @@
+{
+    "OptionExpireDateResponse": {
+        "ExpirationDate": [
+            {
+                "day": 3,
+                "expiryType": "WEEKLY",
+                "month": 1,
+                "year": 2025
+            },
+            {
+                "day": 10,
+                "expiryType": "WEEKLY",
+                "month": 1,
+                "year": 2025
+            },
+            {
+                "day": 17,
+                "expiryType": "MONTHLY",
+                "month": 1,
+                "year": 2025
+            },
+            {
+                "day": 24,
+                "expiryType": "WEEKLY",
+                "month": 1,
+                "year": 2025
+            },
+            {
+                "day": 31,
+                "expiryType": "WEEKLY",
+                "month": 1,
+                "year": 2025
+            },
+            {
+                "day": 7,
+                "expiryType": "WEEKLY",
+                "month": 2,
+                "year": 2025
+            },
+            {
+                "day": 21,
+                "expiryType": "MONTHLY",
+                "month": 2,
+                "year": 2025
+            },
+            {
+                "day": 21,
+                "expiryType": "MONTHLY",
+                "month": 3,
+                "year": 2025
+            },
+            {
+                "day": 17,
+                "expiryType": "MONTHLY",
+                "month": 4,
+                "year": 2025
+            },
+            {
+                "day": 20,
+                "expiryType": "MONTHLY",
+                "month": 6,
+                "year": 2025
+            },
+            {
+                "day": 18,
+                "expiryType": "MONTHLY",
+                "month": 7,
+                "year": 2025
+            },
+            {
+                "day": 15,
+                "expiryType": "MONTHLY",
+                "month": 8,
+                "year": 2025
+            },
+            {
+                "day": 19,
+                "expiryType": "MONTHLY",
+                "month": 9,
+                "year": 2025
+            },
+            {
+                "day": 19,
+                "expiryType": "MONTHLY",
+                "month": 12,
+                "year": 2025
+            },
+            {
+                "day": 16,
+                "expiryType": "MONTHLY",
+                "month": 1,
+                "year": 2026
+            },
+            {
+                "day": 18,
+                "expiryType": "MONTHLY",
+                "month": 6,
+                "year": 2026
+            },
+            {
+                "day": 18,
+                "expiryType": "MONTHLY",
+                "month": 12,
+                "year": 2026
+            },
+            {
+                "day": 15,
+                "expiryType": "MONTHLY",
+                "month": 1,
+                "year": 2027
+            }
+        ]
+    }
+}

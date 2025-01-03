@@ -1,0 +1,9 @@
+1)      Market Quotes
+2)      Account List
+3)      Options Chain
+4)      Options Expire Dates
+5)      Exit
+Please select an option: 3
+
+Please enter Stock Symbol: txt
+Error: Quote API service error

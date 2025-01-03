@@ -7,7 +7,9 @@ import re
 
 # loading configuration file
 config = configparser.ConfigParser()
-config.read('config.ini')
+# config.read('config.ini')
+# config.read('C:/Users/jjel0/OneDrive/Data_Analytics/repositories/config_sandbox.ini')
+config.read('C:/Users/jjel0/OneDrive/Data_Analytics/repositories/config_live.ini')
 
 # logger settings
 logger = logging.getLogger('my_logger')

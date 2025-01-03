@@ -1,0 +1,77 @@
+1)      Market Quotes
+2)      Account List
+3)      Options Chain
+4)      Options Expire Dates
+5)      Exit
+Please select an option: 4
+
+Please enter Stock Symbol: txt
+Traceback (most recent call last):
+  File "C:\Users\jjel0\anaconda3\envs\trade_env\Lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jjel0\anaconda3\envs\trade_env\Lib\site-packages\urllib3\util\connection.py", line 72, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jjel0\anaconda3\envs\trade_env\Lib\socket.py", line 963, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\jjel0\anaconda3\envs\trade_env\Lib\site-packages\urllib3\connectionpool.py", line 714, in urlopen
+    httplib_response = self._make_request(
+                       ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jjel0\anaconda3\envs\trade_env\Lib\site-packages\urllib3\connectionpool.py", line 403, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\jjel0\anaconda3\envs\trade_env\Lib\site-packages\urllib3\connectionpool.py", line 1053, in _validate_conn
+    conn.connect()
+  File "C:\Users\jjel0\anaconda3\envs\trade_env\Lib\site-packages\urllib3\connection.py", line 363, in connect
+    self.sock = conn = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "C:\Users\jjel0\anaconda3\envs\trade_env\Lib\site-packages\urllib3\connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x000001B11A529700>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\jjel0\anaconda3\envs\trade_env\Lib\site-packages\requests\adapters.py", line 486, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\jjel0\anaconda3\envs\trade_env\Lib\site-packages\urllib3\connectionpool.py", line 798, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jjel0\anaconda3\envs\trade_env\Lib\site-packages\urllib3\util\retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.etrade.comv1', port=443): Max retries exceeded with url: /market/optionexpiredate?symbol=txt.json&oauth_consumer_key=0b17dfe1365b235d88b5b7fa66a66c0f&oauth_nonce=40c656d2d11c23ef8f893a1b8ff764c200cf93b4&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1704728691&oauth_token=c0ELGBUfUHdWPDwb%2BJE4PM9mL4ePFwg4UvI%2FfLSiFw8%3D&oauth_version=1.0&oauth_signature=mtiAj58%2BNTVyg5cluGxIA67Wh2k%3D (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001B11A529700>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))        
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\jjel0\OneDrive\Data_Analytics\repositories\trade\etrade_python_client.py", line 122, in <module>
+    oauth()
+  File "c:\Users\jjel0\OneDrive\Data_Analytics\repositories\trade\etrade_python_client.py", line 81, in oauth
+    main_menu(session, base_url)
+  File "c:\Users\jjel0\OneDrive\Data_Analytics\repositories\trade\etrade_python_client.py", line 114, in main_menu
+    optionschain.OptionsExpDate()
+  File "c:\Users\jjel0\OneDrive\Data_Analytics\repositories\trade\optionschain\optionschain.py", line 119, in OptionsExpDate
+    response = self.session.get(url)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jjel0\anaconda3\envs\trade_env\Lib\site-packages\requests\sessions.py", line 602, in get
+    return self.request("GET", url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jjel0\anaconda3\envs\trade_env\Lib\site-packages\rauth\session.py", line 210, in request
+    return super(OAuth1Session, self).request(method, url, **req_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jjel0\anaconda3\envs\trade_env\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jjel0\anaconda3\envs\trade_env\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jjel0\anaconda3\envs\trade_env\Lib\site-packages\requests\adapters.py", line 519, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.etrade.comv1', port=443): Max retries exceeded with url: /market/optionexpiredate?symbol=txt.json&oauth_consumer_key=0b17dfe1365b235d88b5b7fa66a66c0f&oauth_nonce=40c656d2d11c23ef8f893a1b8ff764c200cf93b4&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1704728691&oauth_token=c0ELGBUfUHdWPDwb%2BJE4PM9mL4ePFwg4UvI%2FfLSiFw8%3D&oauth_version=1.0&oauth_signature=mtiAj58%2BNTVyg5cluGxIA67Wh2k%3D (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001B11A529700>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
