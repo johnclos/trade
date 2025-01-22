@@ -63,7 +63,7 @@ def oauth():
 
     # Step 1: Get OAuth 1 request token and secret 
     request_token, request_token_secret = etrade.get_request_token(
-        params = {"oauth_callback": "oob", "format": "json"})
+        params = {"oauth_callback": "oob", "format": "json", "range": "1y", "interval": "day"})
 
     # Step 2: Go through the authentication flow. Login to E*TRADE.
     # After you login, the page will provide a verification code to enter.
